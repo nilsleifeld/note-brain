@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>🎼</title>
+	<link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+	<main class="app" id="app">
+		<button type="button" class="btn-help" id="btnHelp" aria-label="Hilfe: Noten von tiefem G bis hohem G"
+			title="Notenübersicht">🆘</button>
+		<dialog id="helpDialog" class="help-dialog" aria-labelledby="helpDialogTitle">
+			<div class="help-dialog-inner">
+				<h2 class="help-dialog-title" id="helpDialogTitle">Violinschlüssel</h2>
+				<p class="help-dialog-lead">Alle Töne von <strong>G</strong> unten bis <strong>G</strong> oben</p>
+				<div class="help-staff-list" id="helpStaffList"></div>
+				<form method="dialog" class="help-dialog-actions">
+					<button type="submit" class="btn-help-close">Schließen</button>
+				</form>
+			</div>
+		</dialog>
+		<div class="app-stage">
+			<div class="staff-wrap" id="staff" aria-hidden="true"></div>
+		</div>
+		<div class="app-bottom">
+			<div class="choices" id="choices"></div>
+			<button type="button" class="btn-next" id="btnNext" disabled aria-label="Nächste zufällige Note">🎲</button>
+		</div>
+	</main>
+	<script type="module" src="./main.js"></script>
+</body>
+
+</html>
